@@ -20,10 +20,7 @@ In general, **"agnostic" is on the opposite of "specified"**, and interoperable 
 
 * LINK TO THIS PAPER ON [ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness](https://arxiv.org/abs/1811.12231), WHILE MSAs IS SHAPE BIASED!!
 
-
-
-
 * ViT model represents [Vision Transformers in Image Recognition](https://viso.ai/deep-learning/vision-transformer-vit/)
 
-
 ## Reading Notes
+

@@ -1,10 +1,9 @@
 # Anticorrelated Noise Injection for Improved Generalization
+I will update this later!
 
-## Abstract
+## Main content
 
-## 1. Introduction
-
-### suppliment:
+### Suppliment:
 * Hessian 
 Here is [Blog1](https://jamesmccaffrey.wordpress.com/2017/08/03/the-hessian-and-machine-learning/). It is a technique for machine learning optimization with invloves minimizing error to find values for neural network weights and biases.
 
