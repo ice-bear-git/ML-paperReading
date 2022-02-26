@@ -1100,13 +1100,38 @@ Hessian Eigenvalues: The change in the gradient of a loss function as we step an
 <h2 id="contribution">Contribution<a class="headerlink" href="#contribution" title="Permanent link"></a></h2>
 <p>We address the three key questions</p>
 <h3 id="1-what-properties-of-msas-do-we-need-to-improve-optimization">1. What properties of MSAs Do we need to improve optimization?<a class="headerlink" href="#1-what-properties-of-msas-do-we-need-to-improve-optimization" title="Permanent link"></a></h3>
+<p>Spatial smoothing</p>
 <h4 id="inductive-bias">Inductive Bias<a class="headerlink" href="#inductive-bias" title="Permanent link"></a></h4>
 <p>An appropriate inductive bias can imporve the performance by being generalized spatial smoothing</p>
 <blockquote>
 <p>What is inductive bias?<br />
 To perform prediction on unseen problem, it&rsquo;s necessary to give some assumption which about the nature of target function. Those assumptions are subsumed in the phrase &ldquo;inductive bias&rdquo;.
-* Local MSAs which calculate self-attention only within small windows, achieve better performance than global MSAs.</p>
+* Local MSAs which calculate self-attention only within small windows, achieve better performance than global MSAs.
+* <strong>The Stronger the inductive biases, the stronger the representations (not regularizations)</strong>  When # of assumption increase, efficiency on certain target goes up, and ability of transform learning decrease. Hence, proper inductive biases can help ViT do not overfit on small traning dataset.</p>
 </blockquote>
+<h4 id="compare-to-vit-and-figure-out-the-most-important-feature-flatten-loss-by-suppressing-large-negative-hessian-eigenvalues">Compare to ViT and figure out the most important feature &ndash; Flatten loss by Suppressing large negative Hessian eigenvalues<a class="headerlink" href="#compare-to-vit-and-figure-out-the-most-important-feature-flatten-loss-by-suppressing-large-negative-hessian-eigenvalues" title="Permanent link"></a></h4>
+<ul>
+<li>ViT does not overfit small traning datasets</li>
+<li>ViT&rsquo;s non-convex losses lead to poor performance: <br />
+  ViT has more negative Hessian eigenvalues while ResNet only have few.</li>
+<li>Loss landscape smoothing methods aids in ViT training: Using global average pooling (GAP) to suppresses negative Hessian max eigenvalues as it convexify the loss. It would be the motivation or coonnection behind MSA and GAP classifier.</li>
+<li>MSAs flatten the loss and help NNs learn better representations by suppressing large Hessian eigenvalues.</li>
+<li>Or in large data regimes, the negative Hessian eigenvalues &ndash; the disadvantage of MSAs &ndash; disappers, and only their advantages remian.</li>
+<li>Local MSAs learn stronger representations than global MSA as locality inductive bias suppresses the negative Hessian eigenvalues further &ndash; local MSAs have convex losses.</li>
+</ul>
+<h3 id="2-do-msa-act-like-convs">2. Do MSA act like Convs?<a class="headerlink" href="#2-do-msa-act-like-convs" title="Permanent link"></a></h3>
+<p>MSA are low-pass filters, but Convs are high-pass filter. That&rsquo;s the reason why Convs are vulnerable to high-frequency noise while MSA not. Therefore they are complementary.</p>
+<h4 id="convs-on-early-stage-while-msas-on-later-position">Convs on early stage while MSAs on later position<a class="headerlink" href="#convs-on-early-stage-while-msas-on-later-position" title="Permanent link"></a></h4>
+<p>The MSAs in the early stages performs like Convs, while show their strength in later part. This could serve as an evidence for a hybrid model that uses Convs in early stages and MSAs in late stages.</p>
+<h4 id="msas-aggregate-feature-maps-but-convs-do-not">MSAs aggregate feature maps, but Convs do not<a class="headerlink" href="#msas-aggregate-feature-maps-but-convs-do-not" title="Permanent link"></a></h4>
+<p>Msas ensemble feature maps and reduce the variance of feature map points, while Convs increase the variance for doing nothing.
+* Variance accumulates in every NN layer and tends to increase &ndash;&gt;  the feature map variance in ResNet peasks at the end of each stage. Hence, insert MSAs also at the latter part.</p>
+<h3 id="3how-can-we-harmonize-msas-with-convs">3.How can we harmonize MSAs with Convs?<a class="headerlink" href="#3how-can-we-harmonize-msas-with-convs" title="Permanent link"></a></h3>
+<p>Applying spatial smoothing at the end of stage improves accuracy by ensembling transformed feature map outputs from each stage. The different repeating patterns have different functionality/features<br />
+<img alt="different repeating pattern" src="https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/MSAs-Figure3.png" />  </p>
+<p>This paper establish a rule to build a MSA-Convs NN.<br />
+<img alt="Rule for Alter-NN" src="https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/MSAs-AlterNN-1.png" />
+<img alt="Architecture for Alter-NN" src="https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/MSAs-AlterNN-2.png" /></p>
 <h2 id="background">BackGround<a class="headerlink" href="#background" title="Permanent link"></a></h2>
 <p>This paper contains so many techinique expression and specific &ldquo;common ground&rdquo; in Image task performance. All of the useful links will be cited here with a brief description. Always step back and equipped yourself with sufficient knowledge.</p>
 <ul>
