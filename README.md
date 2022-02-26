@@ -4,5 +4,7 @@ This repository will record all of my ML paper reading reflection and [experimen
 
 ## Paper list
 I will list them down based on reading timeline with a topic specification at the front.
-* **[Noise Injection]** Anticorrelated Noise Injection for Improved Gene
-* **[Structure]** (How Do vision transformers works?)[]
+* **[Transformer/Attention]** [How Do vision transformers works?](https://github.com/ice-bear-git/ML-paperReading/blob/main/Paper_Feb/How%20Do%20vision%20transformers%20works.md)
+	- More relates to Experimental and Theoretical Understanding
+* **[Noise Injection]** [Anticorrelated Noise Injection for Improved Gene](https://github.com/ice-bear-git/ML-paperReading/blob/main/Paper_Feb/Anticorrelated%20Noise%20Injection%20for%20Improved%20Gene.md)
+	- With Solid Math Proving
