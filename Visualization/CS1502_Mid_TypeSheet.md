@@ -25,10 +25,11 @@
 4. F' becomes a **larger set** -- Contain all states in Q' that contains original items in F
 
 ### RegExp to NFA
+##### ONLY 3 operations are allowed to have in RegExp
 ![Basic](https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/CS1502_1.png)
 If a language is described by a RegExp -- it must be regular
 ![Example 1](https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/CS1502_2.png)
-Consider 
+Be aware of the way to get rid of a state -- find **all possible path through it** and then **Union them**!
 ![Example 2](https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/CS1502_3.png)
 
 ## Turing Machine
