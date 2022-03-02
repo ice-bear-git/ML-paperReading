@@ -27,10 +27,22 @@
 ### RegExp to NFA
 ![Basic](https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/CS1502_1.png)
 If a language is described by a RegExp -- it must be regular
-![Example](https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/CS1502_2.png)
+![Example 1](https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/CS1502_2.png)
+Consider 
+![Example 2](https://github.com/ice-bear-git/ML-paperReading/blob/main/Visualization/CS1502_3.png)
+
+## Turing Machine
+* 当cur state已经在最左是，move left只会让它保持原始位置。所以，要在开始时，人为标记**起始位置为x or #**
+* "Transition function": **delta(q_i, 0) = (q_j, 1, L)** -- 把右侧的0写成1，然后状态从qi到qj，并且把qj向左移动一位
+* As looping exist, L(M) = A won't reject all string that is out of A.
+* **Recognizable**: Accept all string in A, reject or looping on all string out of A
+* **Decideable**: A **Recognizable** TM that is **without looping**
+	- Usually, Without looping, those TM is called "deciders" directly.
+
+
+
 
 ## Proof by Pumping Lemma
-
 Sigma = {0}  
 B = {0^(i^2) | i>=0}
 
