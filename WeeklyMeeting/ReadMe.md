@@ -1,9 +1,10 @@
 # The Weekly Meeting
 Good online courses: 
-* [MIT Deep Learning](http://introtodeeplearning.com)
-* [Uwaterloo Intro to ML](https://cs.uwaterloo.ca/~ppoupart/teaching/cs480-spring19/schedule.html)  
+* [MIT Deep Learning](http://introtodeeplearning.com)  
+The corresponding Codes in download and modified [here](https://github.com/ice-bear-git/ML-paperReading/tree/main/CodeBase/introtodeeplearning-master)   
+* [Uwaterloo Intro to ML](https://cs.uwaterloo.ca/~ppoupart/teaching/cs480-spring19/schedule.html)   
 
-Zoom Links: [here](https://zoom.us/j/95071756890)
+Zoom Links: [here](https://zoom.us/j/95071756890)    
 
 
 ## Mar 21
