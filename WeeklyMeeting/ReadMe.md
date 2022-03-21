@@ -13,7 +13,7 @@ A famous source: [its Github](https://github.com/allenai/allennlp)
 
 
 ### MPC
-Model-Preductuve Control, here is a [quick demo]()   
+Model-Preductuve Control, here is a [quick demo](https://github.com/mcarfagno/mpc_python)   
 I found that's hard to translate pseudo-code 
 
 
