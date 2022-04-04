@@ -3,10 +3,27 @@ Good online courses:
 * [MIT Deep Learning](http://introtodeeplearning.com)  
 The corresponding Codes in download and modified [here](https://github.com/ice-bear-git/ML-paperReading/tree/main/CodeBase/introtodeeplearning-master)   
 * [Uwaterloo Intro to ML](https://cs.uwaterloo.ca/~ppoupart/teaching/cs480-spring19/schedule.html)   
-
 Zoom Links: [here](https://zoom.us/j/95071756890)    
+* Good Jupyter NoteBook Implementation for [Transformers--preprocessing](https://github.com/huggingface/notebooks)    
+## Apr 4
+
+### NLP
+I met with Ruixuan Tang, and it was a good talk. Due to the essay for his graduation, he will be avaliable for the `BERT+NoisyMixup` project around end of July. We will keep in touch on slack for sure.    
+To be better equiped with solid understanding on NLP, I asked him for the resource relates to NLP. For now, he shared me the link for his past course: [UVa CS 4501 Machine Learning for NLP](https://yangfengji.net/uva-nlp-course/). Although they do not implement a `BERT` at the end, they go through all of `Linear Regression`, `CNN`, `LSTM` models. As the link includes all the lectures and recordings, I think it's would be a good starting point for me.
+
+After going through all of the basic model, it would be easy for me to implement a `BERT` then. And maybe it's the time for `Attention` mechanism as well. As `Attention` is specificly for more advanced time-sequential model beyond `LSTM`.
+
+### Explore gym on Colab
+As same as the idea that combine BERT with NoisyMixup Training, we can try this on many interesting implementation in `gym` (a virtual simulation Env). Some of examples are so inspiring and famous, like `Inverse-Pendulum`.   
+As it usually requires the GPU for large training, shifting all the work onto colab is necessary.
+* When it combine with Baseline for parallel accelation. [Here](https://colab.research.google.com/drive/14ioV27tIw8CigcJLbNTVKtHVRI_LB289?usp=drive_fs).  
+
+### Open Lecture
+Continuitily learn the [MIT Deep Learning](http://introtodeeplearning.com) for Lec3, Lec4;
 
 
+
+--------  
 ## Mar 21
 
 ### NLP
