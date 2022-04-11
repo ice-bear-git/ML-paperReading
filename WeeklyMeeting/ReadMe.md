@@ -5,6 +5,20 @@ The corresponding Codes in download and modified [here](https://github.com/ice-b
 * [Uwaterloo Intro to ML](https://cs.uwaterloo.ca/~ppoupart/teaching/cs480-spring19/schedule.html)   
 Zoom Links: [here](https://zoom.us/j/95071756890)    
 * Good Jupyter NoteBook Implementation for [Transformers--preprocessing](https://github.com/huggingface/notebooks)    
+
+
+## Apr 11
+### Recommend a potential undergraduate researcher
+Last week, I recommended your course on linear algebra for ML to a CS undergraduate student Shangjun Jia, as well as your lab topics. He is one of my CS course TA and is good at algorithm. Although I know know his performance on foundamental CS concepts -- Like Tree structure and graphs, but he might help us build up pytorch implementaion in a faster/more efficiency way.  
+I heard he already got you email back. No matter how, I thought keeping touch with some pure Cs guy might help us to build up the Pitt's local lab team. Hope this commendation is worthy your time.
+### Still following the MIT lab
+As the lecture covers the RL for a while, I also spend some time on `gym`, which is a new package for instereting trails like `inverpendulum`.
+### As approaching the end of semester
+I might put more effort on the course project and final preparation.
+### Keep touch with PhD RuiXuan Tang
+We had another meeting during the weekend mainly about the basic info of his NLP experience. He might be more familiar with the NLP classification task instead of understanding. 
+
+
 ## Apr 4
 
 ### NLP
